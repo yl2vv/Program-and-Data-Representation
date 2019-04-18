@@ -1,0 +1,12 @@
+/* Yubin Lim yl2vv
+vector.questions.txt
+January 22, 2019 */
+
+There were no errors when I commented out the #include <iostream>.
+
+When I commented out "using namespace std;" in svutil.h, I got an error where the type of the parameters were undeclared. 
+
+
+QUESTIONS::
+
+I do not understand why there were no errors without the #include <iostream> when there are inputs and outputs inside the svtest.cpp file.

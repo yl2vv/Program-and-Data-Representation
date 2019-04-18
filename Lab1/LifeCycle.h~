@@ -1,0 +1,9 @@
+#ifndef LIFECYCLE_H
+#define LIFECYCLE_H
+
+class Lifecycle {
+ public:
+ private:
+};
+
+#endif

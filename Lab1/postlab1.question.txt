@@ -1,0 +1,9 @@
+/* Yubin Lim yl2vv
+postlab1.question.txt
+January 22, 2019 */
+
+Why doesn't list.h need #ifndef and #define? Do headers not require those two declarations in the beginning?
+
+Do linked lists work as stacks with pop and push?
+
+What is the difference between a pointer list and a non-pointer list?
