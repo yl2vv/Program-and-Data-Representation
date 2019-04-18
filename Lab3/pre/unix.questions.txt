@@ -1,0 +1,8 @@
+/*Yubin Lim yl2vv
+unix.questions.txt
+Feb 1, 2019
+CS2150-103
+*/
+
+Question:
+What does the mod symbol do in unix? I get an error message when I use %.

@@ -1,0 +1,6 @@
+/* Yubin Lim yl2vv
+difficulties.txt
+Feb 7, 2019 
+CS2150 - 103*/
+
+Thankfully, I did not run into many difficulties while working on the post lab. Some minor mistakes that I have made was using "." instead of "->" for my list pointer. I had to go back and change all my mistakes. Another mistake I made was using "push()" on my postfixCalculator. I did not realize that my constructor PostfixCalculator cannot take in methods of stack.h. I was quickly able to resolve the problem by making a method called push in postfixCalculator.cpp which basically calls the push method from stacks onto the stack initialized in my calculator constructor.
