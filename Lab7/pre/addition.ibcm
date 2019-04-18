@@ -1,0 +1,28 @@
+C008 000		jmp	start 	skip around the variables
+0000 001 x 		dw 	 	int x 
+0000 002 y 		dw 	 	int y 
+0000 003 z 		dw 	 	int z
+0000 004 s 		dw 		int s
+0000 005				leave space for changes 
+0000 006
+0000 007
+1000 008 start	readH		read hexadecimal value x from input
+4001 009		store	x	stores x in 001
+1000 00A		readH		read y from input
+4002 00B		store	y	stores y in 002
+1000 00C		readH		read z from input
+4003 00D		store 	z	stores z in 003
+3004 00E		load	s 	load s, sum, from 004
+5001 00F		add		s	add x (001) to accumulator (s)
+5002 010		add		s	add y (002) to accumulator (s+x)
+5003 011		add		s	add z (003) to accumulator (s+x+y)
+1800 012		printH		output s, sum
+D015 013		jumpe	xit	if accumulator, sum, is zero: jump to exit
+C008 014		jmp		start	jump to 008, sum is not zero. restart 
+3001 015 xit	load	x 	load x from 001
+1800 016 		printH		output hexadecimal value x
+3002 017		load	y	load y from 002
+1800 018		printH		output hexadecimal value y
+3003 019		load	z 	load z from 003
+1800 01A		printH		output hexadecimal value z
+0000 01B		halt		halt

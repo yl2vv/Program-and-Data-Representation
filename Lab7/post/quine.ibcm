@@ -1,0 +1,30 @@
+C008 000		jmp 	start	jump to start
+3000 001 l		dw				load line
+0000 002 i		dw				int iterator
+001D 003 MAX	dw				int max number of lines
+0001 004 one	dw				int one
+0000 005 zero	dw				int zero
+0002 006 ip		dw 				int memory of i
+0014 007 dp		dw				int memory of doit
+3002 008 start	load	i 		load i
+6006 009 		sub 	ip 		if (i == memory of i) print 0
+D01A 00A		jumpe 	print0	jump to print 0
+3002 00B 		load	i 		load i
+6007 00C 		sub 	dp 		if (i == memory of doit) print 0
+D01A 00D		jumpe 	print0	jump to print 0
+3003 00E 		load	MAX 	load max into accumulator
+6002 00F		sub		i 		subtract i (if i <= MAX)
+E01D 010 		jmpl  	xit 	jump to exit if i is greater 
+3001 011 		load 	l 		load line in iteration
+5002 012 		add 	i 		add i to get current line
+4014 013		store	doit 	store instruction into doit
+0000 014 doit	dw 				instruction to load line
+1800 015 		printH 			print accumulator
+3002 016 inc	load 	i 		load i 
+5004 017 		add 	one 	increment i
+4002 018 		store 	i 		store new value of i
+C008 019 		jmp 	start 	go through loop again
+3005 01A print0	load	zero	load zero
+1800 01B 		printH			print 
+C016 01C		jump 	inc 	jump to increment i
+0000 01D xit 	
